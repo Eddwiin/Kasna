@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 001
+      author: Maguran
+      preConditions:
+        - dbms:
+            type: postgresql
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: VARCHAR
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(50)
+              - column:
+                  name: price
+                  type: INT
+              - column:
+                  name: quantity
+                  type: INT
