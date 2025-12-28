@@ -73,6 +73,10 @@
             <groupId>com.kasna.system</groupId>
             <artifactId>common-dataaccess</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.kasna.system</groupId>
+            <artifactId>product-application-service</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

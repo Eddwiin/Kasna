@@ -11,12 +11,16 @@
     <modules>
         <module>product-service</module>
         <module>common</module>
+        <module>infrastructure</module>
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.code.style>official</kotlin.code.style>
         <kotlin.compiler.jvmTarget>1.8</kotlin.compiler.jvmTarget>
+        <spring-kafka.version>4.0.0</spring-kafka.version>
+        <avro.version>1.12.1</avro.version>
+        <kafka-avro-serializer.version>8.1.1</kafka-avro-serializer.version>
     </properties>
 
     <parent>
@@ -119,6 +123,26 @@
             <dependency>
                 <groupId>com.kasna.system</groupId>
                 <artifactId>product-dataaccess</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>kafka</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>common-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>product-domain-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>product-application-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>

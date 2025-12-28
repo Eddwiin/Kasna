@@ -69,6 +69,10 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>com.kasna.system</groupId>
+            <artifactId>common-domain</artifactId>
+        </dependency>
     </dependencies>
 
 </project>
