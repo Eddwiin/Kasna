@@ -22,4 +22,4 @@ spring:
 
   liquibase:
     enabled: true
-    change-log: classpath:/db/changelog/master.yaml
+    change-log: classpath:/common/common-dataccess/src/main/resources/db/changelog/master.yaml

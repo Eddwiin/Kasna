@@ -3,34 +3,38 @@ package com.kasna.system.product.service.dataaccess.product.entity
 import jakarta.persistence.*
 import java.math.BigDecimal
 import java.time.LocalDateTime
+import java.util.UUID
 
 @Entity
 @Table(name = "product")
 class ProductEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long? = null
+    var id: UUID? = null
 
     @Column(nullable = false)
-    private val name: String? = null
+    val name: String? = null
 
     @Column(length = 1000)
-    private val description: String? = null
+    val description: String? = null
 
     @Column(nullable = false)
-    private val price: BigDecimal? = null
+    val price: BigDecimal? = null
 
     @Column(nullable = false)
-    private val stockQuantity = 0
-
-    private val imageUrl: String? = null
+    val stockQuantity = 0
 
     @Column(nullable = false)
-    private val active = true
+    val imageUrl: String? = null
 
-    private var createdAt: LocalDateTime? = null
+    @Column(nullable = false)
+    val active = true
 
-    private var updatedAt: LocalDateTime? = null
+    @Column(nullable = false)
+    var createdAt: LocalDateTime? = null
+
+    @Column(nullable = false)
+    var updatedAt: LocalDateTime? = null
 
 
     @PrePersist
