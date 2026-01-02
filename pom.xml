@@ -149,6 +149,10 @@
             <dependency>
                 <groupId>com.kasna.system</groupId>
                 <artifactId>order-application-service</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>order-domain-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
