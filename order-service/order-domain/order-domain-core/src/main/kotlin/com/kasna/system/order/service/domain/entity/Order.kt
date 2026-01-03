@@ -16,9 +16,9 @@ class Order(
     val price: Money,
     val trackingId: TrackingId? = null,
     var orderStatus: OrderStatus? = null,
+    val items: MutableList<OrderItem> = mutableListOf()
 ) : AggregateRoot<OrderId>(OrderId(UUID.randomUUID())) {
     private var failureMessages: MutableList<String> = mutableListOf()
-    private val items: MutableList<OrderItem> = mutableListOf()
 
     companion object {
         val FAILURE_MESSAGE_DELIMITER = ","
