@@ -8,7 +8,7 @@ import jakarta.validation.Valid
 
 
 interface OrderInputService {
-    fun createOrder(@Valid createOrderCommand: CreateOrderCommand?): CreateOrderResponse
+    fun createOrder(@Valid createOrderCommand: CreateOrderCommand): CreateOrderResponse
 
     fun trackOrder(@Valid trackOrderQuery: TrackOrderQuery?): TrackOrderResponse?
 }

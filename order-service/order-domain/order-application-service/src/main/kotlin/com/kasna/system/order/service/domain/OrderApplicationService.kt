@@ -11,8 +11,8 @@ import org.springframework.stereotype.Component
 class OrderApplicationService(
     val orderCreateCommandHandler: OrderCreateCommandHandler
 ): OrderInputService {
-    override fun createOrder(createOrderCommand: CreateOrderCommand?): CreateOrderResponse {
-        TODO("Not yet implemented")
+    override fun createOrder(createOrderCommand: CreateOrderCommand): CreateOrderResponse {
+        return orderCreateCommandHandler.createOrder(createOrderCommand)
     }
 
     override fun trackOrder(trackOrderQuery: TrackOrderQuery?): TrackOrderResponse? {

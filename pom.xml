@@ -145,10 +145,17 @@
             <dependency>
                 <groupId>com.kasna.system</groupId>
                 <artifactId>product-application-service</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kasna.system</groupId>
                 <artifactId>order-application-service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>order-application</artifactId>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.kasna.system</groupId>

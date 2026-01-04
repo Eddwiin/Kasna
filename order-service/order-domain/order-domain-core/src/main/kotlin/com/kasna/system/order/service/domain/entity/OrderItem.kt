@@ -7,12 +7,12 @@ import com.kasna.system.order.service.domain.valueobject.OrderItemId
 
 
 class OrderItem(
-    private var orderItemId: OrderItemId,
     val product: Product,
     val quantity: Int = 0,
     val price: Money,
     val subTotal: Money,
-) : BaseEntity<OrderItemId>(orderItemId) {
+) : BaseEntity<OrderItemId>(OrderItemId(0)) {
+    private lateinit var orderItemId: OrderItemId
     private lateinit var orderId: OrderId
 
     fun isPriceValid(): Boolean {

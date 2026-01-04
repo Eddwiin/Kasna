@@ -8,6 +8,7 @@ import com.kasna.system.order.service.domain.dto.create.CreateOrderCommand
 import com.kasna.system.order.service.domain.dto.create.CreateOrderResponse
 import com.kasna.system.order.service.domain.dto.create.OrderAddress
 import com.kasna.system.order.service.domain.entity.Order
+import com.kasna.system.order.service.domain.entity.OrderItem
 import com.kasna.system.order.service.domain.entity.Product
 import com.kasna.system.order.service.domain.entity.Restaurant
 import com.kasna.system.order.service.domain.valueobject.StreetAddress
@@ -47,5 +48,16 @@ class OrderDataMapper {
         orderStatus = order.orderStatus!!,
         message = message
     )
+
+    fun orderItemsToOrderItemEntities(orderItems: List<com.kasna.system.order.service.domain.dto.create.OrderItem>): MutableList<OrderItem> {
+        return orderItems.map { orderItem ->
+            OrderItem(
+                product = Product(ProductId(orderItem.productId)),
+                price = Money(orderItem.price),
+                quantity = orderItem.quantity,
+                subTotal = Money(orderItem.subTotal),
+            )
+        }.toMutableList()
+    }
 
 }

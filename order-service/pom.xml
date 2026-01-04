@@ -12,8 +12,8 @@
     <artifactId>order-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>order-application</module>
         <module>order-domain</module>
+        <module>order-application</module>
     </modules>
 
     <properties>
