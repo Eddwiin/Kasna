@@ -13,7 +13,6 @@ import io.github.oshai.kotlinlogging.KotlinLogging
 import org.springframework.transaction.annotation.Transactional
 import java.util.*
 
-
 open class OrderCreateCommandHandler(
     val customerOutputRepository: CustomerOutputRepository,
     val restaurantOutputRepository: RestaurantOutputRepository,

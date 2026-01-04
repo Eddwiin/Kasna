@@ -160,6 +160,10 @@
             <dependency>
                 <groupId>com.kasna.system</groupId>
                 <artifactId>order-domain-core</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.kasna.system</groupId>
+                <artifactId>order-container</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>

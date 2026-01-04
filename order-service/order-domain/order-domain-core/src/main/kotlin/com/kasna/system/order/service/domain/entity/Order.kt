@@ -99,5 +99,18 @@ class Order(
             orderItem.initializeOrderItem(super.id, OrderItemId(itemId++))
         }
     }
+
+    fun validateOrder() {
+        validateInitialOrder();
+        validateTotalPrice();
+        validateItemsPrice();
+    }
+
+    fun initializeOrder() {
+        var itemId: Long = 1
+        for (orderItem in items) {
+            orderItem.initializeOrderItem(super.id, OrderItemId(itemId++))
+        }
+    }
 }
 
